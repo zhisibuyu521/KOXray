@@ -57,7 +57,6 @@ vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
 Trojan-go
 
 ```bash
-客户端下载: https://github.com/p4gefau1t/trojan-go/releases
 {
     "run_type": "client",
     "local_addr": "127.0.0.1",
