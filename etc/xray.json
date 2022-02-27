@@ -1,0 +1,52 @@
+{
+    "inbounds": 
+    [
+        {
+            "listen": "/etc/caddy/vmess","protocol": "vmess",
+            "settings": {"clients": [{"id": "$AUUID"}]},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "/$AUUID-vmess"}}
+        },
+        {
+            "listen": "/etc/caddy/vless","protocol": "vless",
+            "settings": {"clients": [{"id": "$AUUID"}],"decryption": "none"},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "/$AUUID-vless"}}
+        },
+        {
+            "listen": "/etc/caddy/trojan","protocol": "trojan",
+            "settings": {"clients": [{"password":"$AUUID"}]},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "/$AUUID-trojan"}}
+        },
+        {
+            "port": 4234,"listen": "127.0.0.1","tag": "onetag","protocol": "dokodemo-door",
+            "settings": {"address": "v1.mux.cool","network": "tcp","followRedirect": false},
+            "streamSettings": {"security": "none","network": "ws","wsSettings": {"path": "/$AUUID-ss"}}
+        },
+        {
+            "port": 4324,"listen": "127.0.0.1","protocol": "shadowsocks",
+            "settings": {"method": "$ParameterSSENCYPT","password": "$AUUID"},
+            "streamSettings": {"security": "none","network": "domainsocket","dsSettings": {"path": "apath","abstract": true}}
+        },
+        {   "port": 5234,"listen": "127.0.0.1","protocol": "socks",
+            "settings": {"auth": "password","accounts": [{"user": "$AUUID","pass": "$AUUID"}]},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "/$AUUID-socks"}}
+        }
+    ],
+    
+    "outbounds": 
+    [
+        {"protocol": "freedom","tag": "direct","settings": {}},
+        {"protocol": "blackhole","tag": "blocked","settings": {}},
+        {"protocol": "socks","tag": "sockstor","settings": {"servers": [{"address": "127.0.0.1","port": 9050}]}},
+        {"protocol": "freedom","tag": "twotag","streamSettings": {"network": "domainsocket","dsSettings": {"path": "apath","abstract": true}}}    
+    ],
+    
+    "routing": 
+    {
+        "rules": 
+        [
+            {"type": "field","inboundTag": ["onetag"],"outboundTag": "twotag"},
+            {"type": "field","outboundTag": "sockstor","domain": ["geosite:tor"]},
+            {"type": "field","outboundTag": "blocked","domain": ["geosite:category-ads-all"]}
+        ]
+    }
+}
