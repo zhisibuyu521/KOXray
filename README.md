@@ -1,6 +1,6 @@
-# Koyeb容器云部署Xray高性能代理服务
+# 某容器云部署Xray高性能代理服务
 
-使用Koyeb容器云部署Xray高性能代理服务，通过ws传输的(vmess、vless、trojan、shadowsocks、socks)等协议
+在某容器云部署Xray高性能代理服务，通过ws传输的(vmess、vless、trojan、shadowsocks、socks)等协议
 
 # 请勿使用常用的账号部署此项目，以免封号！！
 
@@ -23,7 +23,7 @@
 
 `DOCKER_PASSWORD`：Docker Hub 登录密码
 
-6. 打开Koyeb主页，新建一个应用
+6. 打开某容器云主页，新建一个应用
 7. 应用配置如下所示
 
 `Docker Image`：Docker Hub镜像地址，格式为“docker.io/Docker Hub ID/自定义镜像名称”
@@ -87,7 +87,8 @@ ShadowSocks
 ```
 
 ## 注意
-请勿滥用本专案，类似 Koyeb 的免费服务少之又少，且用且珍惜
+
+请勿滥用本仓库
 
 ## 赞助我们
 
