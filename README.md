@@ -40,14 +40,14 @@ Environment variables：`Key`：PORT，`Value`：80
 V2ray
 
 ```
-地址：xxx.koyeb.app
+地址：xxx.prod-glb.koyeb.app
 端口：443
 默认UUID：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
 vmess额外id：0
 加密：none
 传输协议：ws
 伪装类型：none
-伪装域名：xxx.koyeb.app
+伪装域名：xxx.prod-glb.koyeb.app
 路径：/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-vless
 vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
 底层传输安全：tls
@@ -61,7 +61,7 @@ Trojan-go
     "run_type": "client",
     "local_addr": "127.0.0.1",
     "local_port": 1080,
-    "remote_addr": "xxx.koyeb.app",
+    "remote_addr": "xxx.prod-glb.koyeb.app",
     "remote_port": 443,
     "password": [
         "24b4b1e1-7a89-45f6-858c-242cf53b5bdb"
@@ -69,7 +69,7 @@ Trojan-go
     "websocket": {
         "enabled": true,
         "path": "/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-trojan",
-        "host": "xxx.koyeb.app"
+        "host": "xxx.prod-glb.koyeb.app"
     }
 }
 ```
@@ -83,7 +83,7 @@ ShadowSocks
 加密：chacha20-ietf-poly1305
 插件程序：xray-plugin_windows_amd64.exe
 说明：需将插件 https://github.com/shadowsocks/xray-plugin/releases 下载解压后放至shadowsocks同目录
-插件选项: tls;host=xxx.koyeb.app;path=/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-ss
+插件选项: tls;host=xxx.prod-glb.koyeb.app;path=/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-ss
 ```
 
 ## 注意
