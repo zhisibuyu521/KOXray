@@ -9,7 +9,7 @@
 1. fork本仓库
 2. 在`Dockerfile`内第3-5行修改自定义设置，说明如下：
 
-`AUUID`：用来部署节点的UUID，可在[uuidgenerator](https://www.uuidgenerator.net/)生成
+`AUUID`：用来部署节点的UUID，如有需要可在[uuidgenerator](https://www.uuidgenerator.net/)生成
 
 `CADDYIndexPage`：伪装站首页文件
 
