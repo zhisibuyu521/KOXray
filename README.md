@@ -2,6 +2,8 @@
 
 在某容器云部署Xray高性能代理服务，通过ws传输的(vmess、vless、trojan、shadowsocks、socks)等协议
 
+# 请之前已经fo过本项目的重新fo此项目或自行搜索pull request更新项目至最新
+
 # 请勿使用常用的账号部署此项目，以免封号！！
 
 ## 部署步骤
