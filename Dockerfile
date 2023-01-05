@@ -1,4 +1,7 @@
 FROM alpine:edge
+WORKDIR /app
+
+RUN echo "hello" > world.txt
 
 # ARG AUUID="24b4b1e1-7a89-45f6-858c-242cf53b5bdb"
 # ARG CADDYIndexPage="https://github.com/AYJCSGM/mikutap/archive/master.zip"
