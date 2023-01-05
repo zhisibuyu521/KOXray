@@ -1,3 +1,3 @@
-FROM golang:alpine AS builder
-WORKDIR /src
-COPY . /src
+FROM javtube/javtube-server AS builder
+
+ENTRYPOINT ["/javtube-server"]
